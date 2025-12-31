@@ -1,0 +1,32 @@
+.welcome-title{
+  font-weight: bold;
+  color: #444;
+}
+
+.mini-card{
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  transition: transform .2s;
+}
+
+.mini-card:hover{
+  transform: translateY(-5px);
+}
+
+.card-1{ background: linear-gradient(135deg,#667eea,#764ba2); }
+.card-2{ background: linear-gradient(135deg,#ff9966,#ff5e62); }
+.card-3{ background: linear-gradient(135deg,#11998e,#38ef7d); }
+.card-4{ background: linear-gradient(135deg,#36d1dc,#5b86e5); }
+
+.mini-card h4{
+  margin-bottom: 6px;
+}
+
+.mini-card p{
+  margin: 0;
+  font-size: 20px;
+}
