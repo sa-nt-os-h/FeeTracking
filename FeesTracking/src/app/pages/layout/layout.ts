@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { GlobalConstant } from '../../core/guard/constant/Global.constant';
 
 @Component({
   selector: 'app-layout',
@@ -13,7 +14,7 @@ isSidebarActive = false;
  router=inject(Router);
 constructor()
 {
-const localData = localStorage.getItem('batchuser'); // This would usually come from an Auth service
+const localData = localStorage.getItem(GlobalConstant.LoCAL_KEY_LOGIN); // This would usually come from an Auth service
 if(localData!=null)
 {
   this.localDataAny=JSON.parse(localData);
@@ -27,7 +28,7 @@ if(localData!=null)
  
   onLogoff()
   {
-    localStorage.removeItem('batchuser');
+    localStorage.removeItem(GlobalConstant.LoCAL_KEY_LOGIN);
     this.router.navigate(['login']);
   }
 }

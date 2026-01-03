@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GlobalConstant } from '../../core/guard/constant/Global.constant';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,7 @@ onLogin()
    next:(res:any)=>
    {
     debugger;
-     localStorage.setItem('batchuser',JSON.stringify(res.data));
+     localStorage.setItem(GlobalConstant.LoCAL_KEY_LOGIN,JSON.stringify(res.data));
      this.router.navigateByUrl('dashboard');
    },
    error:(err=>{
